@@ -1,5 +1,12 @@
+import sys
+
 def process_scores():
-    scores = list(map(int, input("Enter scores separated by commas: ").split(",")))
+    if len(sys.argv) < 2:
+        print("Usage: python array.py 5,10,15,20,25")
+        return
+
+    # Read scores from the first command-line argument
+    scores = list(map(int, sys.argv[1].split(",")))
 
     total = sum(scores)
     average = total / len(scores)
@@ -12,6 +19,5 @@ def process_scores():
     print("Maximum Score:", maximum)
     print("Minimum Score:", minimum)
 
-
-if __name__ == "__main__":
+if _name_ == "_main_":
     process_scores()
