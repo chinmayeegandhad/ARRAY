@@ -19,5 +19,5 @@ def process_scores():
     print("Maximum Score:", maximum)
     print("Minimum Score:", minimum)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     process_scores()
